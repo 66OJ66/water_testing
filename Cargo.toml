@@ -1,0 +1,34 @@
+[package]
+name = "water_testing"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Bevy
+bevy = { version = "0.14", default-features = false, features = [
+    "multi_threaded",
+    "bevy_state",
+    "bevy_gltf",
+    "bevy_ui",
+    "bevy_text",
+    "bevy_winit",
+    "bevy_dev_tools",
+    "default_font",
+    "hdr",
+    "x11",
+    "wayland",
+    "animation",
+    "png",
+    "ktx2",
+    "tonemapping_luts",
+    "basis-universal",
+    "zstd",
+    "serialize",
+] }
+# Community
+bevy_water = "0.14.0"
+bevy_flycam = "0.14.0"
+bevy_atmosphere = "0.10"
+
+[profile.dev.package."*"]
+opt-level = 3
